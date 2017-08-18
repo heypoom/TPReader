@@ -160,7 +160,7 @@
     margin: 0 7% 8% 7%
     text-align: left
     font-size: 1em
-    font-family: "Roboto"
+    font-family: Helvetica Neue
     border-radius: 8px
     box-shadow: 0 0 1px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba
     width: 85%
@@ -199,7 +199,7 @@
     text-align: left
     font-size: 1em
     line-height: 1.45em
-    font-family: "Roboto"
+    font-family: Helvetica Neue
     border-radius: 4px
     box-shadow: 0 0 1px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.12)
 
@@ -213,7 +213,7 @@
       color: grey
 
     small.name
-      font-family: "Roboto"
+      font-family: Helvetica Neue
       font-weight: 600
 
     img.image

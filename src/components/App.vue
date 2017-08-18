@@ -15,6 +15,6 @@
 <style lang="sass">
   body
     margin: 0
-    font-family: "Roboto"
+    font-family: Helvetica Neue
     font-weight: 300
 </style>
