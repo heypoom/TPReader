@@ -20,13 +20,35 @@
     <!-- Add to home screen for Windows -->
     <meta name="msapplication-TileImage" content="/static/img/icons/msapplication-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#000000">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Roboto, Helvetica Neue, sans-serif;
+      }
+
+      #loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-size: 2.4em;
+        font-weight: 300;
+        color: #777;
+      }
+    </style>
+
     <% for (var chunk of webpack.chunks) {
         for (var file of chunk.files) {
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?"preload":"prefetch" %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?"style":"script" %>"><% }}} %>
   </head>
   <body>
-    <div id="app">This is your fallback content in case JavaScript fails to load.</div>
+    <div id="app">
+      <div id="loading">
+        Loading TapReader...
+      </div>
+    </div>
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
     <!-- built files will be auto injected -->
